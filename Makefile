@@ -19,5 +19,5 @@ $(THESIS).aux: refs.bib
 	pdflatex $(THESIS).tex -draftmode
 
 clean:
-	rm -f *.{aux,lof,log,lot,lol,,bcf,toc,bbl,blg,pdf,run.xml,out}
-	rm -f content/*.{aux,lof,log,lot,lol,,bcf,toc,bbl,blg,pdf,run.xml,out}
+	rm -f *.{aux,lof,log,lot,lol,,bcf,toc,bbl,blg,run.xml,out}
+	rm -f content/*.{aux,lof,log,lot,lol,,bcf,toc,bbl,blg,run.xml,out}
