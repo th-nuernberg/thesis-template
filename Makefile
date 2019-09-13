@@ -14,7 +14,7 @@ $(THESIS).pdf: $(THESIS).bbl $(THESIS).tex
 $(THESIS).bbl: $(THESIS).aux
 	bibtex $(THESIS).aux
 
-$(THESIS).aux: $(THESIS).bib
+$(THESIS).aux: refs.bib
 	pdflatex $(THESIS).tex -draftmode
 	pdflatex $(THESIS).tex -draftmode
 
