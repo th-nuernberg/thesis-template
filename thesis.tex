@@ -55,6 +55,7 @@
 \usepackage{makeidx}
 \usepackage{paralist,ifthen,todonotes}
 \usepackage{url}
+\usepackage{pdfpages}
 
 % table setup
 \usepackage{longtable}
@@ -131,7 +132,11 @@
 
 \frontmatter
 \include{cover}\cleardoublepage
-\include{statement}\cleardoublepage
+
+% download the following form and complete it (hit save in your editor)
+% https://intern.ohmportal.de/fileadmin/Gelenkte_Doks/Abt/SZS/SB/SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf
+\includepdf{SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf}\cleardoublepage
+
 \include{content/0_abstract}\cleardoublepage
 
 \tableofcontents
