@@ -57,6 +57,7 @@
 \usepackage{makeidx}
 \usepackage{paralist,ifthen,todonotes}
 \usepackage{url}
+\usepackage[toc]{glossaries}
 \usepackage{pdfpages}
 
 % table setup
@@ -126,6 +127,9 @@
 % TODO remove if not needed...
 \usepackage{blindtext}
 
+% load glossary entries
+\makenoidxglossaries
+\loadglsentries{glossary}
 
 \begin{document}
 
@@ -168,5 +172,7 @@
 
 \bibliographystyle{wmaainf}
 \bibliography{refs}
+
+\printnoidxglossaries
 
 \end{document}
