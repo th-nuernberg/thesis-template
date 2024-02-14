@@ -18,13 +18,13 @@
 
 
 % details about your thesis
-\newcommand{\titel}{My very fancy thesis title.}
+\newcommand{\titel}{Gefahren im Metaverse: Social Engineering als Grundlage für Angriffe im Metaverse}
 \newcommand{\artderarbeit}{Bachelorarbeit}  % {Bachelorarbeit,Masterarbeit}
-\newcommand{\autor}{Georg Simon Ohm}
-\newcommand{\studiengang}{Informatik}  % {Informatik,Wirtschaftsinformatik,Medieninformatik}
-\newcommand{\matrikelnr}{123\,4567}
-\newcommand{\erstgutachter}{Prof.\,Dr.~Korbinian Riedhammer}
-\newcommand{\zweitgutachter}{Prof.\,Dr.~Bartosz von\,Rymon\,Lipinski}
+\newcommand{\autor}{Andre Schindler}
+\newcommand{\studiengang}{Wirtschaftsinformatik}  % {Informatik,Wirtschaftsinformatik,Medieninformatik}
+\newcommand{\matrikelnr}{327\,2457}
+\newcommand{\erstgutachter}{Prof.\,Dr.~Ronald Petrlic}
+\newcommand{\zweitgutachter}{Prof.\,Dr.~Peter Rausch}
 \newcommand{\betreuer}{M.Sc.\,~Martina Schmidt}
 \newcommand{\unternehmen}{Musterfirma GmbH}
 \newcommand{\logo}{figures/TH-Nuernberg-RGB.png}
@@ -51,7 +51,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,relsize,textcomp,csquotes}
 \usepackage{amsmath,amsfonts}
-\usepackage[ngerman,english]{babel}  % flip for German thesis
+\usepackage[ngerman]{babel}  % flip for German thesis
 \usepackage[final]{graphicx}
 \usepackage{setspace,geometry,xcolor}
 \usepackage{makeidx}
@@ -140,19 +140,19 @@
 
 % download the following form and complete it (hit save in your editor)
 % https://intern.ohmportal.de/fileadmin/Gelenkte_Doks/Abt/SZS/SB/SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf
-%\includepdf{SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf}\cleardoublepage
+\includepdf{SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf}\cleardoublepage
 
 \include{content/0_abstract}\cleardoublepage
 
 \tableofcontents
 
 \mainmatter
-\include{content/1_intro}
-\include{content/2_data}
-\include{content/3_method}
-\include{content/4_experiments}
-\include{content/5_outlook}
-\include{content/6_summary}
+\include{content/Einleitung}
+\include{content/Metaverse}
+\include{content/SocialEngeneering}
+\include{content/GefahrenimMetaverse}
+\include{content/Zusammenfassung}
+\include{content/FazitundAusblick}
 
 % remove if not needed
 \appendix
