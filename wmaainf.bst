@@ -17,7 +17,8 @@
 %   DO NOT MAKE ANY!! changes to this style without consulting the author
 %
 ENTRY
-  { address
+  { 
+    address
     author
     booktitle
     chapter
@@ -337,8 +338,8 @@ FUNCTION {format.pages}
 { pages missing$
     { "" }
     { pages multi.page.check
-        { "pp.~" pages n.dashify * }
-        { "p.~" pages n.dashify * }
+        { "S.~" pages n.dashify * }
+        { "s.~" pages n.dashify * }
       if$
     }
   if$
@@ -498,19 +499,23 @@ FUNCTION {inproceedings}
 FUNCTION {conference} { inproceedings }
  
 FUNCTION {manual}
-{ output.bibitem
-  format.authors output
+{ 
+  output.bibitem
+  author missing$
+    { "author and editor" format.editors output.check }
+    { "author" format.authors output.check }
+  if$
   new.block
   "title" format.btitle output.check
-  new.block
-  organization field.or.null output
+  "publisher" publisher field.or.null output.check
   address field.or.null output
   format.edition output
-  format.date output
+  "year" format.date output.check
   new.block
   note field.or.null output
   fin.entry
 }
+
  
 FUNCTION {mastersthesis}
 { output.bibitem
