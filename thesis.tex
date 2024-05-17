@@ -42,7 +42,7 @@
 
 \RedeclareSectionCommand[tocindent=0pt]{section}
 \RedeclareSectionCommand[tocindent=0pt]{subsection}
-%\RedeclareSectionCommand[tocnumwidth=7pt]{chapter}
+%\RedeclareSectionCommand[tocnumwidth=0pt]{chapter}
 
 \usepackage{scrhack}
 
@@ -161,11 +161,9 @@
 %\include{content/a1_supplemental}
 
 \backmatter
-\listoffigures
-\cleardoublepage
-
-\listoftables
-\cleardoublepage
+%Tabellenverzeichnis
+%\listoftables
+%\cleardoublepage
 
 %\renewcommand{\lstlistlistingname}{List of Listings}  % change for German thesis
 %\lstlistoflistings
@@ -173,6 +171,9 @@
 
 \bibliographystyle{wmaainf}
 \bibliography{refs}
+
+\listoffigures
+\cleardoublepage
 
 \printnoidxglossaries
 
