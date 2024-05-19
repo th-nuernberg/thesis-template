@@ -40,8 +40,8 @@
 \renewcommand*\chaptermarkformat{\chapappifchapterprefix{\ }% 
   \thechapter.\enskip}
 
-\RedeclareSectionCommand[tocindent=0pt]{section}
-\RedeclareSectionCommand[tocindent=0pt]{subsection}
+\RedeclareSectionCommand[tocindent=10pt]{section}
+\RedeclareSectionCommand[tocindent=18pt]{subsection}
 %\RedeclareSectionCommand[tocnumwidth=0pt]{chapter}
 
 \usepackage{scrhack}
@@ -150,11 +150,12 @@
 
 \mainmatter
 \include{content/1_Einleitung}
-\include{content/2_Grundlagen}
-\include{content/3_SEimMV}
-\include{content/4_AbwehrundSchutz}
+\include{content/2_Metaverse}
+\include{content/3_SocialEngineering}
+\include{content/4_SEimMV}
+\include{content/5_AbwehrundSchutz}
 %\include{content/Zusammenfassung}
-\include{content/5_FazitundAusblick}
+\include{content/6_FazitundAusblick}
 
 
 % remove if not needed
