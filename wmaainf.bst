@@ -457,9 +457,9 @@ FUNCTION {inbook}
   "publisher" publisher field.or.null output.check
   address field.or.null output
   format.edition output
+  "note" note field.or.null output.check
   "year" format.date output.check
   new.block
-  note field.or.null output
   fin.entry
 }
  
