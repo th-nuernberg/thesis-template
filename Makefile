@@ -18,7 +18,7 @@ SB_0050_FO:
 	echo "*************************************************************************************"; \
 	echo "* You need to download, fill and save-as-pdf form SB_0050_FO from the Ohm intranet. *"; \
 	echo "*************************************************************************************"; \
-	echo "wget https://intern.ohmportal.de/fileadmin/Gelenkte_Doks/Abt/SZS/SB/SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf"; \
+	echo "wget https://www.th-nuernberg.de/fileadmin/global/Public_Docs/SB/SB_0009_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf"; \
 	echo ""; \
 	exit 1; \
 	}
