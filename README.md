@@ -6,7 +6,7 @@ It is set up to be printed as a book including a coverpage.
 
 ## Important!
 
-You need to download, fill and save-as-pdf the official [statement and copyright form](https://intern.ohmportal.de/fileadmin/Gelenkte_Doks/Abt/SZS/SB/SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf), in its most recent version.
+You need to download, fill and save-as-pdf the official [statement and copyright form `SB_0009_V11_FO`](https://www.ohmportal.de/?qs_servlet=downloadIxServlet&rq_RecId=34323239&qs_fileId=4069&qs_lastModified=1730798018713&qs_fileControl=E531FD422F3D3AAE892A425228694B756704E80A), in its most recent version.
 It will be included in the final `thesis.pdf`.
 
 
