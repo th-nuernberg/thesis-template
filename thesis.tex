@@ -1,3 +1,4 @@
+\pdfminorversion=7
 \documentclass[
     11pt,
     a4paper,
@@ -66,18 +67,20 @@
 \usepackage{ragged2e}
 \usepackage{lscape}
 
-% pdf hyperref
-\usepackage[
-    bookmarks=true,
+% PDF/A compliance
+\begin{filecontents*}{\jobname .xmpdata}
+\Title{\titel}
+\Author{\autor}
+\Subject{\titel}
+\Keywords{\keywords} 
+\Creator{\autor}
+\end{filecontents*}
+
+\usepackage[a-3b,mathxmp]{pdfx}
+\hypersetup{
     bookmarksopen=true,
     bookmarksnumbered=true,
     bookmarksopenlevel=1,
-    pdftitle={\titel},
-    pdfauthor={\autor},
-    pdfcreator={\autor},
-    pdfsubject={\titel},
-    pdfkeywords={\keywords},
-    pdfpagelabels=true,
     colorlinks=true,
     linkcolor=red,
     urlcolor=magenta,
@@ -87,8 +90,8 @@
     menucolor=red,
     plainpages=false,
     hypertexnames=true,
-    linktocpage=true,
-]{hyperref}
+    linktocpage=true
+}
 
 % configure your listings style
 \usepackage{listings}
