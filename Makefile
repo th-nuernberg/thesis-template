@@ -1,35 +1,36 @@
-SHELL=/bin/bash
-THESIS=thesis
+DOC=document
+EXPOSE=expose/expose
+LATEX=pdflatex -shell-escape
 
 .SUFFIXES:
 .SUFFIXES: .bib .pdf .tex
-.PHONY: clean
+.PHONY: clean expose
 
-run: $(THESIS).pdf
+run: $(DOC).pdf
 
+expose: $(EXPOSE).pdf
 
-$(THESIS).pdf: SB_0050_FO $(THESIS).bbl $(THESIS).tex
-	pdflatex $(THESIS).tex -draftmode
-	pdflatex $(THESIS).tex 
+$(EXPOSE).pdf: $(EXPOSE).bbl $(EXPOSE).tex
+	cd expose && $(LATEX) expose.tex -draftmode
+	cd expose && $(LATEX) expose.tex
 
-SB_0050_FO:
-	@test -s SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf || { \
-	echo ""; \
-	echo "*************************************************************************************"; \
-	echo "* You need to download, fill and save-as-pdf form SB_0050_FO from the Ohm intranet. *"; \
-	echo "*************************************************************************************"; \
-	echo "wget https://intern.ohmportal.de/fileadmin/Gelenkte_Doks/Abt/SZS/SB/SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf"; \
-	echo ""; \
-	exit 1; \
-	}
+$(EXPOSE).bbl: $(EXPOSE).aux
+	cd expose && BIBINPUTS=.. bibtex expose.aux
 
-$(THESIS).bbl: $(THESIS).aux
-	bibtex $(THESIS).aux
+$(EXPOSE).aux: refs.bib
+	cd expose && $(LATEX) expose.tex -draftmode
+	cd expose && $(LATEX) expose.tex -draftmode
 
-$(THESIS).aux: refs.bib
-	pdflatex $(THESIS).tex -draftmode
-	pdflatex $(THESIS).tex -draftmode
+$(DOC).pdf: $(DOC).bbl $(DOC).tex
+	$(LATEX) $(DOC).tex -draftmode
+	$(LATEX) $(DOC).tex
+
+$(DOC).bbl: $(DOC).aux
+	bibtex $(DOC).aux
+
+$(DOC).aux: refs.bib
+	$(LATEX) $(DOC).tex -draftmode
+	$(LATEX) $(DOC).tex -draftmode
 
 clean:
-	rm -f *.{aux,lof,log,lot,lol,,bcf,toc,bbl,blg,run.xml,out}
-	rm -f content/*.{aux,lof,log,lot,lol,,bcf,toc,bbl,blg,run.xml,out}
+	rm -f {.,content,expose}/*.{aux,lof,log,lot,lol,bcf,toc,bbl,blg,run.xml,out,brf,fdb_latexmk,synctex,fls,xmpdata,xmpi}

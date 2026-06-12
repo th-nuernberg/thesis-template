@@ -1,0 +1,37 @@
+{
+    "editor.wordWrap": "on",
+   
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.linting.delay": 250,
+    "latex-workshop.linting.run": "onType",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        }
+    ],
+    
+    "explorer.excludeGitIgnore": true,
+    
+    "cSpell.enabled": true,
+    "cSpell.language": "en,de-de",
+    "cSpell.minWordLength": 4,
+    "cSpell.ignorePaths": [
+        ".git/{info,lfs,logs,refs,objects}/**",
+        ".git/{index,*refs,*HEAD}",
+        ".vscode",
+        "Makefile",
+        "*.cls",
+        "*.bst"
+    ]
+}

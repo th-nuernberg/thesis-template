@@ -1,15 +1,25 @@
-\chapter{Method}\label{ch:method}
+%----------------------------------------------------------------------
+\chapter{Method}
+\label{ch:method}
+%----------------------------------------------------------------------
 
-In this chapter, we're actually using some code!
+In this chapter, after the \nameref{ch:data} chapter we're actually using some code!
 
-\begin{lstlisting}[language=Python,caption={This is an example of inline listing},captionpos=b]
-x = 1
-if x == 1:
-    # indented four spaces
-    print("x is 1.")
-
-\end{lstlisting}
+\begin{listing}[htbp]
+    \caption{This is an example of inline listing}
+     \label{lst:code0}   
+    \begin{minted}{python}
+    x = 1
+    if x == 1:
+        # indented four spaces
+        print("x is 1.")
+    \end{minted}
+\end{listing}
 
 You can also include listings from a file directly:
 
-\lstinputlisting[language=Python,caption={This is an example of included listing},captionpos=b]{listings/example.py}
+\begin{listing}[htbp]
+    \caption{This is an example of included listing}
+    \label{lst:code1}
+    \inputminted{python}{code/example.py}
+\end{listing}

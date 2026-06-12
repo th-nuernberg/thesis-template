@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-latex",
+            "type": "shell",
+            "command": "make",
+            "args": ["run"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Build thesis using pdflatex via Makefile"
+        },
+        {
+            "label": "clean-latex",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"],
+            "problemMatcher": [],
+            "detail": "Remove generated auxiliary files"
+        },
+        {
+            "label": "build-expose",
+            "type": "shell",
+            "command": "make",
+            "args": ["expose"],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Build expose using pdflatex via Makefile"
+        }
+    ]
+}

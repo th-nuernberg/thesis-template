@@ -1,0 +1,53 @@
+%----------------------------------------------------------------------
+% Expose for a thesis
+%
+% Please read the README.md for instructions on how to use this template.
+%----------------------------------------------------------------------
+\documentclass[
+    ieee, % Bibliography style: ieee, wmaainf
+    bachelor, % Type of thesis: master, bachelor
+    english % Language: german, english
+]{expose}
+%----------------------------------------------------------------------
+% Meta data section
+%----------------------------------------------------------------------
+\title{My very fancy thesis title}
+\author{Muster Masterstudent}
+\date{\today}
+%----------------------------------------------------------------------
+\examiner{Prof.\,Dr.\,Max Mustermann}
+%----------------------------------------------------------------------
+% \company{Example AG} % Optional
+% \supervisor{Dr.\,rer.\,nat.\,Muster Betreuerin} % Optional, multiple supported
+%----------------------------------------------------------------------
+% Begin document
+%----------------------------------------------------------------------
+\begin{document}
+%----------------------------------------------------------------------
+% Title Header
+%----------------------------------------------------------------------
+\maketitle
+\thispagestyle{firstpage}
+\pagestyle{pages}
+\begin{multicols}{2}
+%----------------------------------------------------------------------
+% Content
+%----------------------------------------------------------------------
+\input{content/1_problem}
+\input{content/2_goal}
+\input{content/3_approach}
+\input{content/4_literature}
+%----------------------------------------------------------------------
+% Thesis Outline 
+%----------------------------------------------------------------------
+% \input{content/5_outline} % Optional
+%----------------------------------------------------------------------
+% References
+%----------------------------------------------------------------------
+\makebibliography
+\end{multicols}
+%----------------------------------------------------------------------
+% Timeline % Optional
+%----------------------------------------------------------------------
+% \input{content/6_timeline} % Optional
+\end{document}
