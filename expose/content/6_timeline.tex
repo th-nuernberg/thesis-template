@@ -1,57 +1,57 @@
 \begin{landscapepage}
-%----------------------------------------------------------------------
-\section*{Timeline}
-\label{sec:time}
-%----------------------------------------------------------------------
+	%----------------------------------------------------------------------
+	\section*{Timeline}
+	\label{sec:time}
+	%----------------------------------------------------------------------
 
-If you already have a strong idea of the approach, and also some milestones to reach at a certain point, it makes sense to define a schedule so that you can check your progress against it later on. This can be done in a simple tabular format, or using a Gantt chart as shown below.
+	If you already have a strong idea of the approach, and also some milestones to reach at a certain point, it makes sense to define a schedule so that you can check your progress against it later on. This can be done in a simple tabular format, or using a Gantt chart as shown below.
 
-\begin{center}
-	\resizebox{.7\linewidth}{!}{%
-		\begin{ganttchart}[
-				hgrid,
-				vgrid,
-				bar height=.6,
-				group/.append style={fill=black!30},
-				bar/.append style={fill=black!10},
-				milestone/.append style={fill=black},
-				link/.style={->, thick},
-				x unit=.55cm,
-				y unit chart=.8cm,
-				title height=.6,
-				bar label font=\scriptsize,
-				group label font=\scriptsize\bfseries,
-				milestone label font=\scriptsize\itshape,
-				bar label node/.append style={align=left, text width=4cm},
-				group label node/.append style={align=left, text width=4cm}
-			]{1}{14}
+	\begin{center}
+		\resizebox{.7\linewidth}{!}{%
+			\begin{ganttchart}[
+					hgrid,
+					vgrid,
+					bar height=.6,
+					group/.append style={fill=black!30},
+					bar/.append style={fill=black!10},
+					milestone/.append style={fill=black},
+					link/.style={->, thick},
+					x unit=.55cm,
+					y unit chart=.8cm,
+					title height=.6,
+					bar label font=\scriptsize,
+					group label font=\scriptsize\bfseries,
+					milestone label font=\scriptsize\itshape,
+					bar label node/.append style={align=left, text width=4cm},
+					group label node/.append style={align=left, text width=4cm}
+				]{1}{14}
 
-			% Year across all weeks
-			\gantttitle{2026}{14} \\
+				% Year across all weeks
+				\gantttitle{2026}{14} \\
 
-			% Months with week shares (exemplary Jul/Aug/Sep)
-			\gantttitle{Jul}{5}
-			\gantttitle{Aug}{4}
-			\gantttitle{Sep}{5} \\
+				% Months with week shares (exemplary Jul/Aug/Sep)
+				\gantttitle{Jul}{5}
+				\gantttitle{Aug}{4}
+				\gantttitle{Sep}{5} \\
 
-			% Week numbers (1..12)
-			\gantttitlelist{1,...,14}{1} \\
+				% Week numbers (1..12)
+				\gantttitlelist{1,...,14}{1} \\
 
-			% Group
-			\ganttgroup[name=g1]{Phase A}{1}{6} \\
+				% Group
+				\ganttgroup[name=g1]{Phase A}{1}{6} \\
 
-			% Tasks (bar)
-			\ganttbar[name=task1]{Task 1}{1}{3} \\
-			\ganttbar[name=task2]{Task 2}{3}{6} \\
+				% Tasks (bar)
+				\ganttbar[name=task1]{Task 1}{1}{3} \\
+				\ganttbar[name=task2]{Task 2}{3}{6} \\
 
-			% Milestone
-			\ganttmilestone[name=ms]{Milestone}{6} \\
+				% Milestone
+				\ganttmilestone[name=ms]{Milestone}{6} \\
 
-			% Links
-			\ganttlink{task1}{task2}
-			\ganttlink{task2}{ms}
+				% Links
+				\ganttlink{task1}{task2}
+				\ganttlink{task2}{ms}
 
-		\end{ganttchart}%
-	}
-\end{center}
+			\end{ganttchart}%
+		}
+	\end{center}
 \end{landscapepage}
