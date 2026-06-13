@@ -1,0 +1,85 @@
+%----------------------------------------------------------------------
+% Main document for the thesis template
+%
+% Please read the README.md for instructions on how to use this template.
+%----------------------------------------------------------------------
+\documentclass[
+    ieee, % Bibliography style: ieee, wmaainf
+    bachelor, % Type of thesis: master, bachelor, report
+    english, % Language: german, english
+    singlepage % Cover Layout: singlepage, doublepage
+]{ohm}
+%----------------------------------------------------------------------
+% Meta data section
+%----------------------------------------------------------------------
+\title{My very fancy thesis title}
+\author{Muster Masterstudent}
+\date{\today}
+%----------------------------------------------------------------------
+\examiner{Prof.\,Dr.\,Max Mustermann}
+\examiner{Prof.\,Dr.\,Monica Musterfrau}
+%----------------------------------------------------------------------
+% \subject{Artificial Intelligence and Specific Processor Architecture: TPUs, GPUs} % Optional for reports
+%----------------------------------------------------------------------
+% \company{Example AG} % Optional
+% \supervisor{Dr.\,rer.\,nat.\,Muster Betreuerin} % Optional, multiple supported
+%----------------------------------------------------------------------
+\keyword{Container Image}
+\keyword{Software Supply Chain Security}
+%----------------------------------------------------------------------
+\repository{https://git.informatik.fh-nuernberg.de/maxmu123/thesis} % Optional
+%----------------------------------------------------------------------
+\begin{abstract}
+    \emph{Only if thesis is written in English.}
+\end{abstract}
+%----------------------------------------------------------------------
+\begin{kurzdarstellung}
+    Kurze Zusammenfassung der Arbeit, höchstens halbe Seite.
+    Deutsche Fassung auch nötig, wenn die Arbeit auf Englisch angefertigt wird.
+\end{kurzdarstellung}
+%----------------------------------------------------------------------
+\begin{acknowledgements} % Optional
+    \emph{Only if you want to thank someone.}
+\end{acknowledgements}
+%----------------------------------------------------------------------
+% Import glossary and acronym definitions
+%----------------------------------------------------------------------
+\input{glossary}
+%----------------------------------------------------------------------
+% Begin document
+%----------------------------------------------------------------------
+\begin{document}
+%----------------------------------------------------------------------
+% Cover pages
+%----------------------------------------------------------------------
+\maketitle
+%----------------------------------------------------------------------
+% \frontmatter
+%----------------------------------------------------------------------
+\makeacknowledgements
+\makeabstract
+\maketableofcontents
+\makeacronyms
+%----------------------------------------------------------------------
+% \mainmatter
+%----------------------------------------------------------------------
+\include{content/1_intro}
+\include{content/2_data}
+\include{content/3_method}
+\include{content/4_experiments}
+\include{content/5_outlook}
+\include{content/6_summary}
+%----------------------------------------------------------------------
+% \backmatter
+%----------------------------------------------------------------------
+\listoffigures
+\listoflistings
+\listoftables
+\makelexicon
+\makebibliography
+%----------------------------------------------------------------------
+% \appendix
+%----------------------------------------------------------------------
+\appendix
+\include{content/a1_supplemental}
+\end{document}
