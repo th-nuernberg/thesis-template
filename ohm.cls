@@ -144,6 +144,14 @@
 	\expandafter\def\expandafter\thesubject\expandafter{#1}
 	\hasSubjecttrue
 }
+% Command to set the student id printed below the author on the title page
+\newcommand{\thestudentid}{}
+\newif\ifhasStudentId
+\newcommand{\studentid}[1]
+{
+	\expandafter\def\expandafter\thestudentid\expandafter{#1}
+	\hasStudentIdtrue
+}
 %----------------------------------------------------------------------
 % Paper and format settings
 %----------------------------------------------------------------------
@@ -168,6 +176,7 @@
 	\RequirePackage[english, ngerman]{babel}
 	% Redefine standard names for German
 	\newcommand{\faculty}{Fakult\"{a}t Informatik}
+	\newcommand{\studentidname}{Matrikelnummer}
 	% Set standard names
 	\ifma \newcommand{\type}{Masterarbeit}
 	\else \ifba \newcommand{\type}{Bachelorarbeit}
@@ -183,6 +192,7 @@
 	\ifen
 		% Redefine standard names for English
 		\newcommand{\faculty}{Faculty of Computer Science}
+		\newcommand{\studentidname}{Student ID}
 		% Set standard names
 		\ifma \newcommand{\type}{Master Thesis}
 		\else \ifba \newcommand{\type}{Bachelor Thesis}
@@ -269,6 +279,20 @@
 	\fi
 \fi
 %----------------------------------------------------------------------
+% Document structure and page numbering
+%----------------------------------------------------------------------
+% Front matter: roman page numbers, counted from the cover page onwards.
+% Call this before \maketitle.
+\newcommand{\frontmatter}{
+	\clearpage
+	\pagenumbering{roman}
+}
+% Main matter: arabic page numbers, restarting at 1 with the first chapter.
+\newcommand{\mainmatter}{
+	\clearpage
+	\pagenumbering{arabic}
+}
+%----------------------------------------------------------------------
 % Title page definition
 %----------------------------------------------------------------------
 \renewcommand{\maketitle}{
@@ -304,6 +328,9 @@
 		\vspace*{8ex}
 		\Large
 		\@author\\
+		\ifhasStudentId
+			{\normalsize \studentidname: \thestudentid\\}
+		\fi
 		\ifsinglepage
 			\vspace*{8ex}
 			\large
@@ -348,6 +375,9 @@
 			\faculty\;\ifen at \else an der \fi Technische Hochschule N\"{u}rnberg\\
 			\vspace*{4ex}
 			\@author\\
+			\ifhasStudentId
+				{\normalsize \studentidname: \thestudentid\\}
+			\fi
 			\huge
 			\vspace*{2ex}
 			\textbf{\@title}\\
@@ -383,6 +413,13 @@
 			\fi
 		\fi
 	\end{titlepage}
+	% The titlepage environment resets the page counter, so restore it to
+	% continue after the cover page(s) instead of numbering them twice.
+	\ifsinglepage
+		\setcounter{page}{2}
+	\else
+		\setcounter{page}{3}
+	\fi
 }
 %----------------------------------------------------------------------
 % Table of content
